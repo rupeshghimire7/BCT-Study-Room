@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
-  --color-main: #71c6dd;
+  --color-main: #F9AC66;
   --color-main-light: #e1f6fb;
-  --color-dark: #3f4156;
-  --color-dark-medium: #51546e;
-  --color-dark-light: #696d97;
+  --color-dark: #2d314d; /*nav bar and room display cards*/
+  --color-dark-medium: #3A3E59;
+  --color-dark-light: #5e6485;
   --color-light: #e5e5e5;
   --color-gray: #8b8b8b;
   --color-light-gray: #b2bdbd;
-  --color-bg: #2d2d39;
+  --color-bg: #1a1b2d;
   --color-success: #5dd693;
-  --color-error: #fc4b0b;
+  --color-error: #ed6b5b;
 }
 
 /*========== base styles ==========*/
