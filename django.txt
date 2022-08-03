@@ -1,0 +1,10 @@
+pip install virtualenv
+virtualenv env
+env/scripts/activate
+env/scripts/deactivate
+
+-----------
+django-admin startproject projectname
+python manage.py startapp appname
+settings.py -> installed apps -> 'appname.apps.AppnameConfig'
+'templates' folder -> TEMPLATES -> DIRS=[BASE_DIR/'templates']
