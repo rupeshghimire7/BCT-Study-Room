@@ -1,52 +1,46 @@
 {% load static %}
 
-<!-- <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        .footer {
+            width: 100%;
+            margin-top: auto;
+            padding: 1em;
+            background-color: #151723;
+        }
+
+        .footer__row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .footer__menu {
+            list-style-type: none;
+            display: flex;
+            gap: 1.5em;
+        }
+    </style>
 </head>
-<body> -->
-    
-    <footer class="footer">
-        <div class="footer__col">
-            <h3 class="footer__col--title">Study Buddy</h3>
-            <p class="footer__col--content">Find your study partner</p>
-        </div>
-        <div class="footer__col">
-            <h3 class="footer__col--title">Explore</h3>
-            <p class="footer__col--content">
-            <ul class="footer__menu">
-                <li class="footer__menu--item">
-                    <a href="{% url 'home' %}" class="footer__menu--item--link">Home</a>
-                </li>
-                <li class="footer__menu--item">
+
+<footer class="footer">
+    <div class="footer__row">
+        <ul class="footer__menu">
+            <li class="footer__menu--item">
+                <a href="{% url 'home' %}" class="footer__menu--item--link">Home</a>
+            </li>
+            <li class="footer__menu--item">
                 <a href="{% url 'topics' %}" class="footer__menu--item--link">Topics</a>
-                </li>
-                <li class="footer__menu--item">
-                    <a href="{% url 'about' %}" class="footer__menu--item--link">About</a>
-                </li>
-                <li class="footer__menu--item">
-                    <a href="{% url 'contact' %}" class="footer__menu--item--link">Contact</a>
-                </li>
-            </ul>
-            </p>
-        </div>
-        <div class="footer__col">
-            <h3 class="footer__col--title"></h3>
-            <p class="footer__col--content"></p>
-        </div>
-        <div class="footer__col">
-            <h3 class="footer__col--title"></h3>
-            <p class="footer__col--content"></p>
-        </div>
-    </footer>
-
-
-
-
-
-<!-- </body>
-</html> -->
+            </li>
+            <li class="footer__menu--item">
+                <a href="{% url 'about' %}" class="footer__menu--item--link">About</a>
+            </li>
+            <li class="footer__menu--item">
+                <a href="{% url 'contact' %}" class="footer__menu--item--link">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__row below__footer">&copy; 2022 &ensp; StudyBuddy Corporation &ensp; All rights reserved.
+    </div>
+</footer>
