@@ -14,6 +14,11 @@ from .forms import RoomForm, UserForm, MyUserCreationForm
 #     {'id': 2, 'name': 'Design with me'},
 #     {'id': 3, 'name': 'Frontend developers'},
 # ]
+topics = Topic.objects.all()
+topicscount = 0
+for topic in topics:
+    topicscount +=1
+print(topicscount)
 
 
 def about(request):
@@ -66,7 +71,7 @@ def registerPage(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.error(request, 'An error occurred during registration')
+            messages.error(request, 'Try stronger password. Eg: A3iou#123')
 
     return render(request, 'base/login_register.html', {'form': form})
 
@@ -85,7 +90,7 @@ def home(request):
     room_messages = Message.objects.filter(
         Q(room__topic__name__icontains=q))[0:3]
 
-    context = {'rooms': rooms, 'topics': topics,
+    context = {'rooms': rooms, 'topics': topics, 'topicscount':topicscount,
                'room_count': room_count, 'room_messages': room_messages}
     return render(request, 'base/home.html', context)
 
@@ -105,7 +110,7 @@ def room(request, pk):
         return redirect('room', pk=room.id)
 
     context = {'room': room, 'room_messages': room_messages,
-               'participants': participants}
+               'participants': participants, 'topicscount':topicscount}
     return render(request, 'base/room.html', context)
 
 
@@ -115,7 +120,7 @@ def userProfile(request, pk):
     room_messages = user.message_set.all()
     topics = Topic.objects.all()
     context = {'user': user, 'rooms': rooms,
-               'room_messages': room_messages, 'topics': topics}
+               'room_messages': room_messages, 'topics': topics,'topicscount':topicscount}
     return render(request, 'base/profile.html', context)
 
 
@@ -135,7 +140,7 @@ def createRoom(request):
         )
         return redirect('home')
 
-    context = {'form': form, 'topics': topics}
+    context = {'form': form, 'topics': topics,'topicscount':topicscount}
     return render(request, 'base/room_form.html', context)
 
 
@@ -145,7 +150,7 @@ def updateRoom(request, pk):
     form = RoomForm(instance=room)
     topics = Topic.objects.all()
     if request.user != room.host:
-        return HttpResponse('You are not allowed here!!')
+        return HttpResponse('You are not allowed here!Please Login!')
 
     if request.method == 'POST':
         topic_name = request.POST.get('topic')
@@ -156,7 +161,7 @@ def updateRoom(request, pk):
         room.save()
         return redirect('home')
 
-    context = {'form': form, 'topics': topics, 'room': room}
+    context = {'form': form, 'topics': topics, 'room': room, 'topicscount':topicscount}
     return render(request, 'base/room_form.html', context)
 
 
