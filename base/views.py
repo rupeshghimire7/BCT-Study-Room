@@ -18,7 +18,6 @@ topics = Topic.objects.all()
 topicscount = 0
 for topic in topics:
     topicscount +=1
-print(topicscount)
 
 
 def about(request):
@@ -100,14 +99,18 @@ def room(request, pk):
     room_messages = room.message_set.all()
     participants = room.participants.all()
 
-    if request.method == 'POST':
-        message = Message.objects.create(
-            user=request.user,
-            room=room,
-            body=request.POST.get('body')
-        )
-        room.participants.add(request.user)
-        return redirect('room', pk=room.id)
+    if request.user in User.objects.all():
+        if request.method == 'POST':
+            message = Message.objects.create(
+                user=request.user,
+                room=room,
+                body=request.POST.get('body')
+            )
+            
+            room.participants.add(request.user)
+            return redirect('room', pk=room.id)
+    else:
+        return render(request,'base/errorpage.html')
 
     context = {'room': room, 'room_messages': room_messages,
                'participants': participants, 'topicscount':topicscount}
@@ -137,9 +140,8 @@ def createRoom(request):
             topic=topic,
             name=request.POST.get('name'),
             description=request.POST.get('description'),
-        )
+        )       
         return redirect('home')
-
     context = {'form': form, 'topics': topics,'topicscount':topicscount}
     return render(request, 'base/room_form.html', context)
 
