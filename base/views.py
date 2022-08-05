@@ -19,6 +19,9 @@ from .forms import RoomForm, UserForm, MyUserCreationForm
 def about(request):
     return render(request,'base/about.html')
 
+def contact(request):
+    return render(request,'base/contact.html')
+
 
 def loginPage(request):
     page = 'login'
