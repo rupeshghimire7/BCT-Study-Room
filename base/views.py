@@ -19,8 +19,6 @@ topicscount = 0
 for topic in topics:
     topicscount +=1
 
-superusers = User.objects.filter(is_superuser=True)
-print(superusers)
 
 def about(request):
     return render(request,'base/about.html')
