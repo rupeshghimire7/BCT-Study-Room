@@ -2,36 +2,36 @@
 {% load static %}
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
-        <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
-        {% block head %}
-        {% endblock %}
-        <title>StudyBuddy - Find study partners around the world!</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+{% block head %}
+{% endblock %}
+    <title>StudyBCT - Find study partner in WRC!</title>
+</head>
 
-    <body>
+<body>
 
-        {% include 'navbar.html' %}
+    {% include 'navbar.html' %}
 
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 
-        {% block content %}
+    {% block content %}
 
 
-        {% endblock %}
-        {% include 'footer.html' %}
+    {% endblock %}
+    {% include 'footer.html' %}
 
-        <script src="{% static 'js/script.js' %}"></script>
-    </body>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
 
 </html>
