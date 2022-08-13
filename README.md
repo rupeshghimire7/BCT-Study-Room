@@ -34,7 +34,7 @@ INSTALLED_APPS = [...,
                   "APP_NAME",
                   .....  ]
 ```
-### APP
+## APP
 ![](./static/images/screenshots/app.png)
 
 - In *urls.py* of project, we include path to redirect it to necessary paths and mostly, to urls.py of the app
@@ -94,39 +94,39 @@ You can see clickable Link formatted Logo/Name of company: StudyBCT, guides you 
 A search bar that searches room name or topic and presents the matches.
 A login option to login or register. Toggle from within.
 
-- ![](./static/images/screenshots/navbar.png)
+![](./static/images/screenshots/navbar.png)
 
 
 ### Login
 You are asked with email and password to login into the system.
 
-- ![](./static/images/screenshots/login.png)
+![](./static/images/screenshots/login.png)
 
 ### Register
 You are asked Name, Email, username, password and confirmation password to make an account.
 
-- ![](./static/images/screenshots/register.png)
+![](./static/images/screenshots/register.png)
 
 ### Home
 You are shown Available rooms and Create Room options here.
 
-- ![](./static/images/screenshots/available_create.png)
+![](./static/images/screenshots/available_create.png)
 
 In Create Room, you will be asked Room name, Topic (create new or choose from existing one) and room description.
 
-- ![](./static/images/screenshots/create_room.png)
+![](./static/images/screenshots/create_room.png)
 
 You have the available Rooms here.
 
-- ![](./static/images/screenshots/home.png)
+![](./static/images/screenshots/home.png)
 
 Besides those, you have Recent activities section where you can see the recent messages in the related rooms.
 
-- ![](./static/images/screenshots/recent_activities.png)
+![](./static/images/screenshots/recent_activities.png)
 
 You have Topic Section that you can click on to see rooms of that particular topic.
 
-- ![](./static/images/screenshots/topics.png)
+![](./static/images/screenshots/topics.png)
 
 ### Room
 Here You have the room creator section, a clickable link that leads to profile page. 
@@ -134,22 +134,22 @@ The sections are: *Room name*, *Room Topic*, *Time since creation*.
 Only the room creator can see *EditRoom* and *DeleteRoom* Icons.      
 We can see and write message if we are logged in.
 
-- ![](./static/images/screenshots/room.png)
+![](./static/images/screenshots/room.png)
 
 ### Message 
 Here, we can see messages in a room and only the person who sent the message can have access to the delete option.
 
-- ![](./static/images/screenshots/message.png)
+![](./static/images/screenshots/message.png)
 
 ### Profile 
 In Navbar, once you've been logged in, you will be able to see the profile options: Update and Logout, from the dropdown.
 
-- ![](./static/images/screenshots/profile_options.png)
+![](./static/images/screenshots/profile_options.png)
 
 On clicking the profile image/icon or name, you can visit the profile of the certain user.
 If you are viewing your own profile, you will be presnted with *Edit Profile* option. 
 
-- ![](./static/images/screenshots/profile.png) 
+![](./static/images/screenshots/profile.png) 
 
 In profile section, you can see user's bio, display picture.    
 You can see the rooms hosted by that user and only the messages that are posted by that user.   
@@ -158,16 +158,16 @@ Also, the topics count is there only if user has room of that topic.
 
 In update user option, you can select *Profile Picture*, edit your *Name, Email, Bio, Username*.
 
-- ![](./static/images/screenshots/update_profile.png)
+![](./static/images/screenshots/update_profile.png)
 
 
 ### About Us 
 In this page is the description of the creators.
 You can have access to footer and the options there in every page.
 
-- ![](./static/images/screenshots/about_us.png)
+![](./static/images/screenshots/about_us.png)
 
 ### Contact Us 
 In this page, you can leave your questions and queries. PS: It is not fully functional yet.
 
-- ![](./static/images/screenshots/contact_us.png)
+![](./static/images/screenshots/contact_us.png)
