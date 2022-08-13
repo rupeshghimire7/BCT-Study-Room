@@ -37,7 +37,8 @@ INSTALLED_APPS = [...,
 ## APP
 ![](./static/images/screenshots/app.png)
 
-- In *urls.py* of project, we include path to redirect it to necessary paths and mostly, to urls.py of the app
+- In *urls.py* of project, we include path to redirect it to necessary paths and mostly, to urls.py of the app   
+
 *In Urls.py*
 ```
 urlpattern= [
