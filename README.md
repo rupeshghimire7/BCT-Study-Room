@@ -94,4 +94,66 @@ say index.html file:
 
 
 
-### 💻 User-Interface of SERVER
+# 💻 User-Interface of SERVER
+
+### Navbar
+You can see clickable Link formatted Logo/Name of company: StudyBCT, guides you to Home page. 
+A search bar that searches room name or topic and presents the matches.
+A login option to login or register. Toggle from within.
+
+- <NAVBAR.PNG>
+
+### Login
+You are asked with email and password to login into the system.
+- <Login.png>
+
+### Register
+You are asked Name, Email, username, password and confirmation password to make an account.
+- <Register.png>
+
+### Home
+You are shown Available rooms and Create Room options here. 
+- <Available_create.png>
+In Create Room, you will be asked Room name, Topic (create new or choose from existing one) and room description.
+- <Create_room.png>
+You have the available Rooms here.
+- <Home.png>
+Besides those, you have Recent activities section where you can see the recent messages in the related rooms.
+- <Recent_activities.png>
+You have Topic Section that you can click on to see rooms of that particular topic.
+- <Topics.png>
+
+### Room
+Here You have the room creator section, a clickable link that leads to profile page. 
+The sections are: *Room name*, *Room Topic*, *Time since creation*.  
+Only the room creator can see *EditRoom* and *DeleteRoom* Icons.      
+We can see and write message if we are logged in.
+- <Room.png>
+
+### Message 
+Here, we can see messages in a room and only the person who sent the message can have access to the delete option.
+- <Message.png>
+
+### Profile 
+In Navbar, once you've been logged in, you will be able to see the profile options: Update and Logout, from the dropdown.
+- <Profile_options.png>
+On clicking the profile image/icon or name, you can visit the profile of the certain user.
+If you are viewing your own profile, you will be presnted with *Edit Profile* option. 
+- <Profile.png> 
+In profile section, you can see user's bio, display picture.    
+You can see the rooms hosted by that user and only the messages that are posted by that user.   
+Also, the topics count is there only if user has room of that topic.
+
+
+In update user option, you can select *Profile Picture*, edit your *Name, Email, Bio, Username*.
+- <Update_profile.png>
+
+
+### About Us 
+In this page is the description of the creators.
+You can have access to footer and the options there in every page.
+- <About_us.png>
+
+### Contact Us 
+In this page, you can leave your questions and queries. PS: It is not fully functional yet.
+- <Contact_us.png>
