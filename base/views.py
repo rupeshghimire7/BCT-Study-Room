@@ -110,7 +110,7 @@ def room(request, pk):
             room.participants.add(request.user)
             return redirect('room', pk=room.id)
     else:
-        return render(request,'base/errorpage.html')
+        return redirect('login')
 
     context = {'room': room, 'room_messages': room_messages,
                'participants': participants, 'topicscount':topicscount}
