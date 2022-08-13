@@ -91,8 +91,8 @@ say index.html file:
 # 💻 User-Interface of SERVER
 
 ### Navbar
-You can see clickable Link formatted Logo/Name of company: StudyBCT, guides you to Home page. 
-A search bar that searches room name or topic and presents the matches.
+You can see clickable Link formatted Logo/Name of company: StudyBCT, guides you to Home page.         
+A search bar that searches room name or topic and presents the matches.      
 A login option to login or register. Toggle from within.
 
 ![](./static/images/screenshots/navbar.png)
