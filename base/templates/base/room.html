@@ -66,18 +66,10 @@
               <span>@{{room.host.username}}</span>
             </a>
           </div>
-          <!-- <div class="room__details">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, tenetur laudantium? Dicta repellendus
-            rerum consectetur, voluptatem repudiandae eum ea porro cupiditate provident nulla, deserunt, ab ipsum
-            corporis laboriosam deleniti molestias?
-          </div> -->
           <span class="room__topics">{{room.topic}}</span>
         </div>
-
         <div class="room__conversation">
           <div class="threads scroll">
-
-
             {% for message in room_messages %}
             <div class="thread">
               <div class="thread__top">
@@ -89,9 +81,7 @@
                     <span>@{{message.user.username}}</span>
                   </a>
                   <span class="thread__date">{{message.created|timesince}} ago</span>
-                  
                 </div>
-
                 {% if request.user == message.user %}
                 <a href="{% url 'delete-message' message.id %}">
                   <div class="thread__delete">

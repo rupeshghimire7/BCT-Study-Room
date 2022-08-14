@@ -5,7 +5,7 @@
             <!-- <img src="{% static 'images/logo.svg' %}" /> -->
             <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEuUlEQVRoge2Yf2iUdRzHX5/n7p6bZiZqak7SypFEI4oEISTDahLY9DYvRItR220ZSkVlWX8IYRYKQQrObeqgkLjtHNIf8xcmFEQNQphFqRARWhnmrzXvntvz/fTHPL3d7p7ds62/utd/z/P9fL7v9/vZvj84KFGiRIkSJUqU+P8ixRT1J+rnBGHOgBv8bWK0+dx/acivlmeA/nhTecAyrcCyG7UK2j0Qchtuq957fpw8j0mrYADtqpviuHYPMD/P8BnbsFCiLVfy9aY6YwtQeQHRB2+o9KJ8Gq5t+Wm8taxCARzX3lhgQoAKx+LNYUYUSSViW4BeRN8BlgPLUTYBvamOhvdVh3+00WiNGACo9RgDWDXMSCL20Q2zwTz1QUTecw40bB0PrQxeAe4eYdK52Q9OomEh8MYIPaDylpOIPTIWrWy8AvztbYSLQx5V1lPcriaqbBiLVjaFA4ge8ZzU4nDOmyWe9V61/rWyhgqgwhagr8Bwn7ruBznvZnqaGMqsMWrdpGCAskjraWOZalH+zBn6w6i1vCy65+wQE5B3m8uH5NT61SoqAMCESNvxkD1QgepqVN5GdbVtghUTVjWfGGZK+a7YAArfjkVriG6xoiOR6myoAeksqlg0Eq5p7RoP3YIBUp2xBYjWodbjKjpflCkoF7D4FdVDavF5WaT1dKZeFXESjd2gVZ6KyiG7tuUZETTzKhl/+X4RdzUiVaBzgTtVuCwqZ0FPqAm0l0V3/VxUAI3H7nACfIxS5xUQcAWaQ8nwJlm74yoMXgnSbqhLkbw7ksCXoYATkZXtlwe11k1KBQa2i/IS+Q+/W7Fhn214PfdKMcTgtQNNM2xjjgGVHpPl0mOnAlWyZtelQVOrAunA1DqD1ony0KC6nLQw7aFT5e2yebMB0C9iE50UJ4CFPrR6bZNeKtF9fw0LoIqkE7EjCk/6mPA6sNM27ocS3eN9GOUhFY9VYvEuEKXI9ShwzK5teSrreZDkgcZlYrS7aHXhG+OaNROibb/kDvXF180KBt1Kcc00QSYpXLHQc0Hb7ZXqvddy65OdDVWCtAFzipFWS54ui+w+Ctn/d6orivWu0BKeOvsVeWLzwC0TjRWWaqMKK2HgXgyQtVINgpMOairR0KNIPGw5ezJroay29bDujz3s2HQDj45owJgIcBSy/gKpjthBhGdH6hXYGapp2ZDxpvtj0x1btoE+DwSK/QjAVWCrPW329syH0M/WT3bKnMOgi7xb9WC4tnUFZB1katECJD3NqxwPmUuvZsw7ifpF6RCnQOt8mgeYDGx1Lp7/uu9g/UwAWbvj6kAoXZPnRM4mqcrum56yR/ri62YFgs4DopL3hA675vvMYk131C82Yh0CJvo0no+zjmU9dnuk+QJAsit2H0bvyS1SUeMG+GFSddvNgKM6ifvjTeVWwJwUZfroPeeYQ74Kn7prSWabLRbPu1AhApa7bTzNAwi6OF35e73fPt8B+uNN5SDP+e0rBlV9zW+P7wChAPNG01ck8/w2+DYSTMqPDJ7A444iPX57fAeQNbsuqchGuHWbHCf+sYyM/KNArp/Rql3vaFxqib4oMGO0cwCgqgbrDGp9UujKXKJEiRIlShTiX7cs+caWLI7vAAAAAElFTkSuQmCC">
-            <h1>StudyBCT</h1>
+            <h1>StudyWRC</h1>
         </a>
         <form class="header__search" method="GET" action="{% url 'home' %}">
             <label>
@@ -15,7 +15,7 @@
                         d="M32 30.586l-10.845-10.845c1.771-2.092 2.845-4.791 2.845-7.741 0-6.617-5.383-12-12-12s-12 5.383-12 12c0 6.617 5.383 12 12 12 2.949 0 5.649-1.074 7.741-2.845l10.845 10.845 1.414-1.414zM12 22c-5.514 0-10-4.486-10-10s4.486-10 10-10c5.514 0 10 4.486 10 10s-4.486 10-10 10z">
                     </path>
                 </svg>
-                <input name="q" placeholder="Search for posts" />
+                <input name="q" placeholder="Search for rooms" />
             </label>
         </form>
         <nav class="header__menu">
@@ -42,17 +42,19 @@
                 <p>Login</p>
             </a>
             {% endif %}
+            <!-- the dropdown-menu that displays when the dropdown-button is clicked -->
             <div class="dropdown-menu">
-                <a href="{% url 'update-user' %}" class="dropdown-link"><svg version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <a href="{% url 'update-user' %}" class="dropdown-link">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                         <title>tools</title>
                         <path
                             d="M27.465 32c-1.211 0-2.35-0.471-3.207-1.328l-9.392-9.391c-2.369 0.898-4.898 0.951-7.355 0.15-3.274-1.074-5.869-3.67-6.943-6.942-0.879-2.682-0.734-5.45 0.419-8.004 0.135-0.299 0.408-0.512 0.731-0.572 0.32-0.051 0.654 0.045 0.887 0.277l5.394 5.395 3.586-3.586-5.394-5.395c-0.232-0.232-0.336-0.564-0.276-0.887s0.272-0.596 0.572-0.732c2.552-1.152 5.318-1.295 8.001-0.418 3.274 1.074 5.869 3.67 6.943 6.942 0.806 2.457 0.752 4.987-0.15 7.358l9.392 9.391c0.844 0.842 1.328 2.012 1.328 3.207-0 2.5-2.034 4.535-4.535 4.535zM15.101 19.102c0.26 0 0.516 0.102 0.707 0.293l9.864 9.863c0.479 0.479 1.116 0.742 1.793 0.742 1.398 0 2.535-1.137 2.535-2.535 0-0.668-0.27-1.322-0.742-1.793l-9.864-9.863c-0.294-0.295-0.376-0.74-0.204-1.119 0.943-2.090 1.061-4.357 0.341-6.555-0.863-2.631-3.034-4.801-5.665-5.666-1.713-0.561-3.468-0.609-5.145-0.164l4.986 4.988c0.391 0.391 0.391 1.023 0 1.414l-5 5c-0.188 0.188-0.441 0.293-0.707 0.293s-0.52-0.105-0.707-0.293l-4.987-4.988c-0.45 1.682-0.397 3.436 0.164 5.146 0.863 2.631 3.034 4.801 5.665 5.666 2.2 0.721 4.466 0.604 6.555-0.342 0.132-0.059 0.271-0.088 0.411-0.088z">
                         </path>
                     </svg>
-                    Update</a>
-                <a href="{% url 'logout' %}" class="dropdown-link"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        width="32" height="32" viewBox="0 0 32 32">
+                    Update
+                </a>
+                <a href="{% url 'logout' %}" class="dropdown-link">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                         <title>sign-out</title>
                         <path
                             d="M3 0h22c0.553 0 1 0 1 0.553l-0 3.447h-2v-2h-20v28h20v-2h2l0 3.447c0 0.553-0.447 0.553-1 0.553h-22c-0.553 0-1-0.447-1-1v-30c0-0.553 0.447-1 1-1z">
@@ -61,15 +63,9 @@
                             d="M21.879 21.293l1.414 1.414 6.707-6.707-6.707-6.707-1.414 1.414 4.293 4.293h-14.172v2h14.172l-4.293 4.293z">
                         </path>
                     </svg>
-                    Logout</a>
+                    Logout
+                </a>
             </div>
         </nav>
     </div>
 </header>
-
-<!-- {% if request.user.is_authenticated %}
-<p>Hello {{request.user}}</p>
-<a href="{% url 'logout' %}">Logout</a>
-{% else %}
-<a href="{% url 'login' %}">Login</a>
-{% endif %} -->

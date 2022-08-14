@@ -1,5 +1,5 @@
 
-# StudyBCT - Find your study partner in WRC!
+# StudyWRC - Find your study partner!
 
 This is a web application for WRC that helps students to create their own chat rooms and communicate with every participant.
 
@@ -91,7 +91,7 @@ say index.html file:
 # 💻 User-Interface of SERVER
 
 ### Navbar
-You can see clickable Link formatted Logo/Name of company: StudyBCT, guides you to Home page.         
+You can see clickable Link formatted Logo/Name of company: StudyWRC, guides you to Home page.         
 A search bar that searches room name or topic and presents the matches.      
 A login option to login or register. Toggle from within.
 

@@ -39,7 +39,7 @@ def loginPage(request):
         try:
             user = User.objects.get(email=email)
         except:
-            messages.error(request, 'User does not exist')
+            messages.error(request, 'User does not exist!')
 
         user = authenticate(request, email=email, password=password)
 
@@ -47,7 +47,7 @@ def loginPage(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.error(request, 'Username OR password does not exit')
+            messages.error(request, 'Username OR Password does not match!')
 
     context = {'page': page}
     return render(request, 'base/login_register.html', context)
@@ -152,7 +152,7 @@ def updateRoom(request, pk):
     form = RoomForm(instance=room)
     topics = Topic.objects.all()
     if request.user != room.host:
-        return HttpResponse('You are not allowed here!Please Login!')
+        return HttpResponse('You are not allowed here! Please Login!')
 
     if request.method == 'POST':
         topic_name = request.POST.get('topic')
