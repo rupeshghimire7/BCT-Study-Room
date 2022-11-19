@@ -3,7 +3,7 @@
 
 This is a web application for WRC that helps students to create their own chat rooms and communicate with every participant.
 
-## Authors
+## Developers
 
 - [Rupesh Ghimire](https://www.github.com/rupeshghimire7) - Backend Developer
 - [SandeshGC](https://www.github.com/SandeshGC) - Frontend Developer
