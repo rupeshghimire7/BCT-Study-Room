@@ -1,7 +1,7 @@
 
-# StudyWRC - Find your study partner!
+# BCT Study Room
 
-This is a web application for WRC that helps students to create their own chat rooms and communicate with every participant.
+This is a web application for WRC- BCT that helps students to create their own chat rooms and communicate with every participant.
 
 ## Developers
 
